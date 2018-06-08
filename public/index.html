@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>El·le</title>
+  <link rel="icon" href="img/cervezas.png" type="image/gif" sizes="16x16">
+  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  ;
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  html {
+    overflow-x: hidden;
+  }
+
+  .topnav {
+    overflow: hidden;
+    background-color: #19171c;
+  }
+
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .topnav a:hover {
+    background-color: #ddd;
+    color: #19171c;
+  }
+
+  .topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  .row {
+    margin-top: 1.7%;
+    /* margin-left: 22%;*/
+    margin-bottom: 1.7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  .navbar-fixed {
+    overflow: hidden;
+    background-color: black;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+  }
+
+  .navbar-fixed a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .navbar-fixed a:hover {
+    background: #f1f1f1;
+    color: #19171c;
+  }
+
+  .navbar-fixed a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  .main {
+    padding: 16px;
+    margin-bottom: 30px;
+  }
+
+  .footer1 {
+    background-color: #19171c;
+  }
+
+  .footer2 {
+    color: white;
+  }
+
+  #preus,
+  #preus2,
+  #preus3,
+  #preus4,
+  #comanda,
+  #comanda2,
+  #comanda3 {
+    background-color: #4CAF50;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  .progress {
+    height: 80px;
+  }
+</style>
+
+<body>
+  <ul class="pages">
+    <li class="chat page">
+      <!--<img src="img\uve.png">-->
+      <div id="chatArea">
+        <div class="topnav">
+          <a class="active">El·le</a>
+          <img src="img/damm.jpeg" align="right">
+        </div>
+        <ul class="messages"></ul>
+        <a>
+          <h1 align="center">CERVESA</h1>
+        </a>
+        <div class="progress">
+          <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
+            style="width:100%">
+            <h3 id="preu1">1.7€</h3>
+          </div>
+        </div>
+        <a>
+          <h1 align="center">REFRESC</h1>
+        </a>
+        <div class="progress">
+          <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+            <h3 id="preu2">1.6€</h3>
+          </div>
+        </div>
+        <a></a>
+        <h1 align="center">CUBATA</h1>
+        </a>
+        <div class="progress">
+          <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
+            style="width:100%">
+            <h3 id="preu3">5€</h3>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="comercial page">
+      <div id='barres'>
+        <!-- <ul>Productes</ul> -->
+      </div>
+      <div class="topnav">
+        <a class="active">El·le</a>
+        <a href="http://localhost:8081/">Sortir</a>
+        <a id="reset" href="#">Reset</a>
+        <img src="img/damm.jpeg" align="right">
+        </a>
+      </div>
+      <!--<button class="butopreu" data-id="1" id="preus">Preus</button>-->
+      <div class="row">
+        <div class="col-m-1">
+          <div class="card" style="width:300px">
+            <img id="card-img-top" src="img/botella.png" style="width:100%">
+            <div class="card-body">
+              <h4 id="card-title"></h4>
+              <p id="card-text"></p>
+              <p id="actu1">Preu actualitzat: 1.7€</p>
+              <p id="1card1">Preu comanda: 1.8€</p>
+              <p id="card1">Stock: </p>
+              <button class="butopreu" data-id="1" id="preus">Venta</button>
+              <button id="comanda">Comanda</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-m-1">
+          <div class="card" style="width:300px">
+            <img id="card-img-top" src="img/ref.jpg" style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title" id="titul">Refresc</h4>
+              <p id="card-text1">Preu inicial: 1.6€</p>
+              <p id="actu2">Preu actualitzat: 1.6€</p>
+              <p id="1card2">Preu comanda: 1.7€</p>
+              <p id="card2">Stock: </p>
+              <button class="butopreu" data-id="2" id="preus2">Venta</button>
+              <button id="comanda2">Comanda</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-m-1">
+          <div class="card" style="width:300px">
+            <img id="card-img-top" src="img/cubata.png" style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title" id="tituld">Cubata</h4>
+              <p id="card-text1">Preu inicial: 5.0€</p>
+              <p id="actu3">Preu actualitzat: 5€</p>
+              <p id="1card3">Preu comanda: 5.2€</p>
+              <p id="card3">Stock: </p>
+              <button class="butopreu" data-id="3" id="preus3">Venta</button>
+              <button id="comanda3">Comanda</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-m-1">
+          <div class="card" style="width:300px">
+            <h1 align="center">COMANDA</h1>
+            <div>
+              <h3 align="center" id="aacomanda"></h3>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="navbar-fixed" id="footer1" align="center">
+        <p id="footer2"></p>
+        <a href="drets.html">
+          <p id="footer2">Copyright &copy;</a>
+        </p>
+        <a href="condicions.html">
+          <p id="footer2">Condiciones de uso</a>
+        </p>
+      </div>
+    </li>
+
+    <li class="login page">
+      <div class="form">
+        <h3 class="title">Digues el nom d'usuari</h3>
+        <input class="usernameInput" type="text" maxlength="14" />
+      </div>
+    </li>
+  </ul>
+
+
+
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/main.js"></script>
+</body>
+
+</html>
